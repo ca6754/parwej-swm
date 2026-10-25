@@ -1,250 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🙏 Kalyan 111 Matka - Official App 🙏</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalyan 111 Matka - Official Website</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FCE4EC;
+    }
+
+    .pink-border-box {
+      border: 2px solid #F8BBD0;
+    }
+
+    .magenta-btn-fill {
+      background: linear-gradient(135deg, #C2185B 0%, #D81B60 50%, #880E4F 100%);
+      box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
+      transition: all 0.3s ease;
+    }
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    .magenta-btn-fill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(216, 27, 96, 0.6);
+    }
 
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2329828554437643');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2329828554437643&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+    .magenta-btn-outline {
+      border: 2px solid #D81B60;
+      color: #D81B60;
+      background-color: #FFFFFF;
+      transition: all 0.3s ease;
+    }
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #02140e;
-            overflow-x: hidden;
-        }
+    .magenta-btn-outline:hover {
+      background-color: #FFF0F5;
+      transform: translateY(-2px);
+    }
 
-        /* Animated floating ambient light circles tuned to Emerald Green theme */
-        .ambient-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 0;
-            overflow: hidden;
-            pointer-events: none;
-        }
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
 
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.45;
-            animation: float 10s infinite alternate ease-in-out;
-        }
-
-        .blob-1 {
-            width: 340px;
-            height: 340px;
-            background: #059669; /* Emerald */
-            top: 5%;
-            left: 10%;
-        }
-
-        .blob-2 {
-            width: 380px;
-            height: 380px;
-            background: #10b981; /* Teal Green */
-            bottom: 10%;
-            right: 10%;
-            animation-delay: -5s;
-        }
-
-        .blob-3 {
-            width: 260px;
-            height: 260px;
-            background: #047857; /* Dark Emerald */
-            top: 45%;
-            left: 40%;
-            animation-delay: -3s;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translate(0px, 0px) scale(1);
-            }
-            100% {
-                transform: translate(30px, -40px) scale(1.15);
-            }
-        }
-
-        /* Glassmorphism Card Style */
-        .glass-card {
-            background: rgba(6, 38, 28, 0.75);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border: 1px solid rgba(52, 211, 153, 0.2);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Glowing profile ring animation in Emerald Green */
-        .profile-glow {
-            position: relative;
-        }
-        .profile-glow::after {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 9999px;
-            background: linear-gradient(45deg, #10b981, #34d399, #059669, #6ee7b7);
-            z-index: -1;
-            filter: blur(8px);
-            opacity: 0.9;
-            animation: rotate-glow 4s linear infinite;
-        }
-
-        @keyframes rotate-glow {
-            0% { filter: blur(8px) hue-rotate(0deg); }
-            100% { filter: blur(8px) hue-rotate(360deg); }
-        }
-
-        /* Pulse glow animation for main CTA button */
-        .cta-pulse {
-            animation: pulse-glow 2s infinite;
-        }
-
-        @keyframes pulse-glow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.8);
-            }
-            70% {
-                box-shadow: 0 0 0 20px rgba(52, 211, 153, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
-            }
-        }
-    </style>
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+  </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 relative text-gray-100">
+<body class="min-h-screen text-gray-800 pb-20">
 
-    <!-- Ambient Animated Background -->
-    <div class="ambient-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+  <!-- Sticky Top Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-pink-100 px-4 py-3">
+    <div class="max-w-xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-9 h-9 bg-pink-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow">
+          K
+        </div>
+        <div>
+          <span class="font-extrabold text-pink-700 text-lg tracking-wide block leading-tight">KALYAN 111</span>
+          <span class="text-[10px] text-pink-500 tracking-widest uppercase font-semibold block">OFFICIAL APP</span>
+        </div>
+      </div>
+      
+      <!-- Hamburger Icon -->
+      <button class="w-10 h-10 border border-pink-200 rounded-lg flex items-center justify-center text-pink-700 hover:bg-pink-50">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-xl mx-auto px-4 pt-4 space-y-5">
+
+    <!-- Top Hero Card (White Container with Pink Border) -->
+    <div class="bg-white rounded-3xl p-5 md:p-6 pink-border-box shadow-md text-center space-y-4">
+      
+      <!-- Pill Badge -->
+      <div class="inline-block px-4 py-1 rounded-full border border-pink-300 bg-pink-50 text-pink-700 text-xs font-semibold uppercase tracking-wider">
+        KALYAN 111 MATKA
+      </div>
+
+      <!-- Main Headline -->
+      <div>
+        <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">WELCOME TO</h2>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+          <span class="text-pink-700">KALYAN 111</span> <span class="text-pink-500">MATKA</span>
+        </h1>
+        <p class="text-xs text-gray-500 mt-1 font-medium">Your destination for fast updates and live results.</p>
+      </div>
+
+      <!-- Center Logo Image Box -->
+      <div class="relative mx-auto max-w-[280px] bg-[#003822] rounded-2xl p-6 border-2 border-pink-200 shadow-inner flex flex-col items-center justify-center text-white overflow-hidden my-3">
+        <!-- Emerald Emblem Graphic -->
+        <div class="relative my-2">
+          <svg width="100" height="90" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 10 V85 M25 48 L65 10 M38 35 C55 35 75 45 75 60 C75 75 55 82 40 72 C30 65 35 50 48 52 C58 53 62 62 55 68" 
+                  stroke="#10B981" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+
+        <!-- App Brand Text -->
+        <h2 class="text-2xl font-black tracking-widest text-white mt-1">KALYAN</h2>
+        <p class="text-xs tracking-[0.3em] text-emerald-300 font-bold">111 MATKA</p>
+        
+        <!-- Bottom Pill Overlay -->
+        <div class="mt-4 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-[10px] text-pink-200 uppercase tracking-widest">
+          ◆ KALYAN 111 ◆
+        </div>
+      </div>
+
+      <!-- Download Button 1 (Filled Magenta) -->
+      <a href="https://kalyan111matka.com/" class="magenta-btn-fill pulse-animation block w-full py-3.5 px-6 rounded-xl text-white font-extrabold text-base tracking-wide uppercase text-center flex items-center justify-center space-x-2">
+        <i class="fa-solid fa-download text-lg"></i>
+        <span>⬇ DOWNLOAD NOW</span>
+      </a>
+
+      <!-- Download Button 2 (Outline) -->
+      <a href="https://kalyan111matka.com/" class="magenta-btn-outline block w-full py-3 rounded-xl font-bold text-sm tracking-wide uppercase text-center flex items-center justify-center space-x-2">
+        <i class="fa-solid fa-download"></i>
+        <span>⬇ DOWNLOAD NOW</span>
+      </a>
+
+      <!-- Rating Box -->
+      <div class="bg-pink-50/70 border border-pink-100 rounded-2xl py-3 px-4">
+        <div class="flex justify-center text-amber-400 text-lg space-x-1 mb-1">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-[11px] font-bold text-gray-600 uppercase tracking-wider">
+          FAST RESULTS • SECURE APP • 24/7 SUPPORT
+        </p>
+      </div>
+
     </div>
 
-    <!-- Main Container Card -->
-    <main class="glass-card relative z-10 w-full max-w-md rounded-3xl p-6 sm:p-8 text-center my-6 my-auto">
-        
-        <!-- Profile Image with Glowing Emerald Ring -->
-        <div class="relative w-28 h-28 mx-auto mb-5 profile-glow">
-            <div class="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-emerald-400/50 flex items-center justify-center shadow-inner">
-                <!-- User Logo Image with SVG Fallback -->
-                <img src="logo.png" 
-                     alt="Kalyan 111 Matka Logo" 
-                     class="w-full h-full object-cover" 
-                     onerror="this.onerror=null; this.parentElement.innerHTML='<svg class=\'w-16 h-16 text-emerald-400 drop-shadow-md\' viewBox=\'0 0 100 100\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M30 20V80M30 50L65 20M30 50L65 80\' stroke=\'#34d399\' stroke-width=\'10\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/><path d=\'M25 60C45 65 65 55 75 70\' stroke=\'#10b981\' stroke-width=\'7\' stroke-linecap=\'round\'/></svg>';">
-            </div>
-            <!-- Online Status Indicator badge -->
-            <span class="absolute bottom-1 right-1 bg-emerald-400 border-2 border-slate-950 w-5 h-5 rounded-full shadow-lg" title="Active Now"></span>
+    <!-- Section Title: OUR FEATURES -->
+    <div class="text-center pt-2">
+      <h3 class="text-xl font-black text-pink-800 tracking-wide uppercase">OUR FEATURES</h3>
+      <p class="text-xs text-gray-500 font-medium">Explore the available app features</p>
+    </div>
+
+    <!-- 4 Features Grid (2x2) -->
+    <div class="grid grid-cols-2 gap-3">
+      <!-- Feature 1 -->
+      <div class="bg-white p-4 rounded-2xl border border-pink-200 shadow-sm text-center flex flex-col items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-2">
+          <i class="fa-solid fa-star"></i>
         </div>
+        <h4 class="font-bold text-xs text-pink-900 uppercase">FAST RESULTS</h4>
+        <p class="text-[10px] text-gray-500 mt-1 leading-tight">Get live updated result notifications instantly.</p>
+      </div>
 
-        <!-- Channel Title Header -->
-        <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight mb-1">
-            🙏 Kalyan 111 Matka 🙏
-        </h1>
-        
-        <!-- Subheading / Tagline -->
-        <p class="text-xs sm:text-sm font-medium text-emerald-300/90 tracking-wide uppercase mb-3">
-            Official App &amp; Real-time Updates
-        </p>
-
-        <!-- Subscriber Badge -->
-        <div class="inline-flex items-center gap-2 bg-emerald-950/80 border border-emerald-700/50 rounded-full px-4 py-1.5 mb-6 text-xs sm:text-sm text-gray-200 shadow-sm">
-            <i class="fa-solid fa-users text-emerald-400"></i>
-            <span class="font-bold text-white">50,000+</span>
-            <span class="text-emerald-200/80">Active Users</span>
-            <i class="fa-solid fa-circle-check text-emerald-400 text-xs ml-0.5"></i>
+      <!-- Feature 2 -->
+      <div class="bg-white p-4 rounded-2xl border border-pink-200 shadow-sm text-center flex flex-col items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-2">
+          <i class="fa-solid fa-bolt"></i>
         </div>
+        <h4 class="font-bold text-xs text-pink-900 uppercase">EASY TO USE</h4>
+        <p class="text-[10px] text-gray-500 mt-1 leading-tight">Simple layout for convenient navigation.</p>
+      </div>
 
-        <!-- Main Headline Highlight Banner -->
-        <div class="bg-gradient-to-r from-emerald-600/30 via-teal-500/30 to-emerald-600/30 border border-emerald-400/40 rounded-2xl p-3.5 mb-6">
-            <p class="text-base sm:text-lg font-bold text-emerald-200 leading-snug">
-                🙏 Kalyan 111 Matka - Official App 🙏
-            </p>
+      <!-- Feature 3 -->
+      <div class="bg-white p-4 rounded-2xl border border-pink-200 shadow-sm text-center flex flex-col items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-2">
+          <i class="fa-solid fa-headset"></i>
         </div>
+        <h4 class="font-bold text-xs text-pink-900 uppercase">24/7 SUPPORT</h4>
+        <p class="text-[10px] text-gray-500 mt-1 leading-tight">Dedicated online customer care support.</p>
+      </div>
 
-        <!-- Feature Highlights Box -->
-        <div class="space-y-3 text-left bg-emerald-950/60 rounded-2xl p-4 sm:p-5 border border-emerald-800/60 mb-7">
-            <div class="flex items-center justify-between">
-                <span class="text-sm sm:text-base font-semibold text-gray-100 flex items-center gap-2">
-                    <span>✅</span> Easy to Use Interface
-                </span>
-                <span class="text-emerald-400 font-bold text-sm">✔</span>
-            </div>
-            <div class="flex items-center justify-between">
-                <span class="text-sm sm:text-base font-semibold text-gray-100 flex items-center gap-2">
-                    <span>✅</span> Live Fast Updates
-                </span>
-                <span class="text-emerald-400 font-bold text-sm">✔</span>
-            </div>
-            <div class="flex items-center justify-between">
-                <span class="text-sm sm:text-base font-semibold text-gray-100 flex items-center gap-2">
-                    <span>✅</span> Smart Insights &amp; Results
-                </span>
-                <span class="text-emerald-400 font-bold text-sm">✔</span>
-            </div>
-            <div class="flex items-center justify-between">
-                <span class="text-sm sm:text-base font-semibold text-gray-100 flex items-center gap-2">
-                    <span>✅</span> 24x7 Customer Support
-                </span>
-                <span class="text-emerald-400 font-bold text-sm">✔</span>
-            </div>
+      <!-- Feature 4 -->
+      <div class="bg-white p-4 rounded-2xl border border-pink-200 shadow-sm text-center flex flex-col items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg mb-2">
+          <i class="fa-solid fa-shield-halved"></i>
         </div>
+        <h4 class="font-bold text-xs text-pink-900 uppercase">SAFE & SECURE</h4>
+        <p class="text-[10px] text-gray-500 mt-1 leading-tight">Protected user information and data safety.</p>
+      </div>
+    </div>
 
-        <!-- Call to Action Encouragement -->
-        <p class="text-xs sm:text-sm font-bold text-emerald-300 mb-4 tracking-wide uppercase animate-pulse">
-            💥 Download App &amp; Start Today 💥
-        </p>
+    <!-- Middle Banner Card (Magenta Filled Container) -->
+    <div class="magenta-btn-fill rounded-3xl p-6 text-white text-center space-y-3 shadow-lg">
+      <h3 class="text-lg font-black tracking-wide uppercase">WELCOME TO KALYAN 111 MATKA</h3>
+      <p class="text-xs text-pink-100 font-medium">Download the official app now for best features and instant updates!</p>
+      
+      <!-- White CTA Button -->
+      <a href="https://kalyan111matka.com/" class="block w-full bg-white text-pink-700 font-extrabold py-3 rounded-xl shadow text-sm uppercase tracking-wide hover:bg-pink-50 transition">
+        ⬇ DOWNLOAD NOW
+      </a>
+    </div>
 
-        <!-- DOWNLOAD APP Button (Primary Action) -->
-        <a href="https://kalyan111matka.com/" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           onclick="if(window.fbq) { fbq('track', 'Lead'); }"
-           class="cta-pulse group w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 text-slate-950 font-black text-lg tracking-wider uppercase transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-xl hover:shadow-emerald-400/30">
-            <i class="fa-solid fa-download text-xl transition-transform group-hover:translate-y-0.5"></i>
-            <span>DOWNLOAD APP</span>
-            <i class="fa-solid fa-chevron-right text-sm ml-auto opacity-70 group-hover:translate-x-1 transition-transform"></i>
-        </a>
+    <!-- Download Section Header -->
+    <div class="text-center pt-2">
+      <h3 class="text-lg font-extrabold text-pink-800 uppercase tracking-wide">DOWNLOAD / VISIT</h3>
+      <p class="text-xs text-gray-500">Click below to download official application</p>
+    </div>
 
-        <!-- Meta Ad Compliant Footer Info -->
-        <div class="mt-8 pt-4 border-t border-emerald-900/80 text-center text-[11px] text-emerald-200/60 space-y-1">
-            <p>© 2026 Kalyan 111 Matka. All Rights Reserved.</p>
-            <p class="text-emerald-400/50">Fast, Safe &amp; Secure Experience</p>
-        </div>
+    <!-- Download Button 3 -->
+    <a href="https://kalyan111matka.com/" class="magenta-btn-fill block w-full py-3.5 rounded-xl text-white font-extrabold text-center text-base tracking-wide uppercase shadow-md">
+      ⬇ DOWNLOAD NOW
+    </a>
 
-    </main>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="max-w-xl mx-auto px-4 mt-8">
+    <div class="bg-[#1C0510] text-pink-100 rounded-t-3xl p-6 text-center space-y-4">
+      
+      <h4 class="text-lg font-black text-white tracking-widest uppercase">KALYAN 111 MATKA</h4>
+      <p class="text-xs text-pink-300">Welcome to Kalyan 111 Matka Official App.<br/>Please check details for more information.</p>
+      
+      <!-- Footer Nav Links -->
+      <div class="flex flex-wrap justify-center gap-4 text-xs font-bold text-pink-300 pt-2">
+        <a href="#" class="hover:text-white">HOME</a>
+        <a href="#" class="hover:text-white">FEATURES</a>
+        <a href="#" class="hover:text-white">ABOUT</a>
+        <a href="#" class="hover:text-white">CONTACT</a>
+      </div>
+
+      <div class="border-t border-pink-900/60 pt-4">
+        <p class="text-[11px] text-pink-400">© 2026 Kalyan 111 Matka. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
